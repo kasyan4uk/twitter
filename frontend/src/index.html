@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 lin>Twitter</h1>
+    </header>
+    <main class="main">
+        <section class="authorization">
+            <ul class="authorization__list">
+                <li>
+                    <button class="button__auth" id="registrationBtn">Registration</button>
+                </li>
+                <li>
+                    <button class="button__auth" id="loginBtn">Login</button>
+                </li>
+            </ul>
+            <div class="formsContainer" id="formsContainer">
+              <form class="registrationForm" id="registrationForm" method="post" action="/backend/registration.php">
+                    <label for="username">User name:</label>
+                        <input type="text" id="username" name="username" required>
+                    <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    <input class="button__submit" type="submit" value="Sign up">
+              </form>
+      
+              <form class="loginForm" id="loginForm" action="/backend/login.php" method="post">
+                    <label for="username">User name:</label>
+                        <input type="text" id="username" name="username">
+                    <label for="password">Password:</label>
+                        <input type="password" id="password" name="password">
+                    <input class="button__submit" type="submit" value="Sign in">
+              </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

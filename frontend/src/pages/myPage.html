@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    <link rel="stylesheet" type="text/css" href="/frontend/src/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="headerConatiner">
+      <h1>Twitter</h1>
+      <form action="/backend/logout.php" method="post">
+          <button class="buttonLogout" type="submit">Logout</button>
+      </form>
+    </div>
+</header>
+<main class="main">
+  <h2 class="textTitle">Create New tweet</h2>
+  <form class="tweetForm" action="/backend/addTweets.php" method="post">
+    <textarea class="tweetArea" name="tweetContent" maxlength="250" placeholder="Write a tweet"></textarea>
+    <input class="buttonCreate" type="submit" name="submitTweet" value="Create">
+  </form>
+
+  <h2 class="textTitle">My tweets</h2>
+  <a class="linkPage" href="./allTweet.html">Show all tweets</a>
+  <div class="tweetList" id="myTweetList">
+    <!-- Список моїх твітів -->
+  </div>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,260 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+body {
+    font-family: arial;
+    margin: 0;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.header {
+    background-color: #1DA1F2; 
+
+    width: 800px;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    & h1 {
+        color: aliceblue;
+    }
+}
+
+
+.main {
+    border: solid #1DA1F2;
+
+    width: 800px;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+.authorization__list {
+    display: flex;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.button__auth {
+    width: 95px;
+    height: 30px;
+
+    color: aliceblue;
+    font-weight: 600;
+
+    background-color: #1DA1F2;
+
+    &:hover{
+        border: solid #1DA1F2;
+    }
+}
+
+.formsContainer {
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 20px;
+}
+
+.registrationForm {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loginForm {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button__submit {
+    height: 30px;
+
+    color: aliceblue;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+
+    background-color: #1DA1F2;
+
+    &:hover{
+        color: black;
+        border: solid black;
+    }
+}
+
+
+
+/* Сторінка з твітами */
+
+.headerConatiner {
+    display: flex;
+    align-items: center; 
+    gap: 500px;
+}
+
+.buttonLogout {
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 30px;
+    width: 80px;
+
+    color: aliceblue;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+
+    background-color: rgb(252, 63, 63);
+
+    &:hover{
+        color: black;
+        border: solid black;
+    }
+}
+
+
+.textTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tweetForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweetArea {
+    resize: none;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+
+    width: 90%;
+    height: 100px;
+}
+
+.buttonCreate {
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 30px;
+    width: 80px;
+
+    color: aliceblue;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+
+    background-color: #1DA1F2;
+
+    &:hover{
+        color: black;
+        border: solid black;
+    }
+}
+
+.linkPage {
+    text-decoration: none;
+    color: aliceblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+
+    width: 180px;
+    height: 50px;
+
+    background-color: #1DA1F2;
+    border: solid #1DA1F2;
+    border-radius: 8px;
+
+    &:hover {
+        color: black;
+        border: solid black;
+    }
+}
+
+.tweetList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.tweet{
+    display: flex;
+    justify-content: space-between;
+
+    width: 700px;
+    height: auto;
+    padding: 5px;
+
+    border: solid #1DA1F2;
+}
+
+.tweetContent{
+    display: inline-block;
+    word-wrap: break-word; 
+
+    width: 620px;
+    min-height: 40px;
+    max-height: 200px;  
+}
+
+.editButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: aliceblue;
+    font-weight: 600;
+    border: none;
+
+    width: 50px;
+
+    background-color: #1DA1F2;
+    &:hover{
+        color: black;
+        border: solid black;
+    }
+}
+
+
+
+
