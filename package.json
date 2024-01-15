@@ -20,5 +20,8 @@
   "dependencies": {
     "style-loader": "^3.3.3",
     "webpack-dev-server": "^4.15.1"
+  },
+  "engines": {
+    "npm": "10.2.2"
   }
 }

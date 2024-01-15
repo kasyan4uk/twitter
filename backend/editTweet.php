@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && $data !== null && isset($data['twee
         } else {
             $response = array('message' => 'Помилка при редагуванні твіту');
         }
+        $stmt->close();
     } else {
         $response = array('message' => 'Помилка підготовки запиту');
     }

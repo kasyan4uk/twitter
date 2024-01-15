@@ -6,15 +6,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $username = mysqli_real_escape_string($conn, $username);
-    $password = mysqli_real_escape_string($conn, $password);
-
-    $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-    $result = mysqli_query($conn, $sql);
+    $stmt = $conn->prepare("SELECT * FROM users WHERE username=? AND password=?");
+    $stmt->bind_param("ss", $username, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result) {
-        if (mysqli_num_rows($result) == 1) {
-            $user = mysqli_fetch_assoc($result);
+        if ($result->num_rows == 1) {
+            $user = $result->fetch_assoc();
             $_SESSION['user_id'] = $user['id'];
             header("Location: ../frontend/dist/myPage.html");
             exit();
@@ -23,9 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "<script>window.location.href = '../frontend/dist/index.html';</script>";
         }
     } else {
-        echo "Помилка запиту до бази даних: " . mysqli_error($conn);
+        echo "Помилка запиту до бази даних: " . $stmt->error;
     }
-    mysqli_close($conn);
+
+    $stmt->close();
+    $conn->close();
 }
 ?>
 

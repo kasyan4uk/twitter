@@ -6,9 +6,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+    $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+    $stmt->bind_param("ss", $username, $password);
 
-    if ($conn->query($sql) === TRUE) {
+    if ($stmt->execute()) {
         $user_id = $conn->insert_id;
         $_SESSION['user_id'] = $user_id;
         header("Location: ../frontend/dist/myPage.html");
