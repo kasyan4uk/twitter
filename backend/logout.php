@@ -1,11 +1,7 @@
 <?php
-session_start();
+include 'db_connection.php';
+include 'User.php';
 
-if (isset($_SESSION['user_id'])) {
-    session_unset();
-    session_destroy();
-
-    header("Location: ../frontend/dist/index.html");
-    exit();
-}
+$userManager = new User($db);
+$userManager->logoutUser();
 ?>
